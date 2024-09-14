@@ -20,9 +20,13 @@
    * n is the total number of training inputs
    * a is the vector of outputs from the network when x is input
    *  and the sum is over all training inputs x
--> We aim to get to C(w,b)≈0, which means that our training algorithm has done a good job if it can find weights and biases, and on the contrary it wouldn't be doing so well if C(w,b) is large, which would mean that y(x) is not close to the output a for a large number of inputs
+-> We aim to get to C(w,b)≈0, which means that our training algorithm has done a good job if it can find weights and biases, and on the contrary, it wouldn't be doing so well if C(w,b) is large, which would mean that y(x) is not close to the output a for a large number of inputs
   
-6.  
+5. **Gradient descent:** an optimization algorithm for finding a global minimum of a differentiable function, we use it to find the weights and biases which minimize the cost in the cost function, and so helping the net learn
+
+6. **Stochastic gradient descent:** the idea behind it is to estimate the gradient ∇C by computing ∇C<sub>x</sub> for a small sample of randomly chosen training inputs, by averaging over this small sample we can quickly get a good estimate of the true gradient ∇C, which helps speed up gradient descent, and thus learning
+   * stochastic gradient descent works by picking out a randomly chosen mini-batch of training inputs, and training with those, then we pick out another randomly chosen mini-batch and train with those. And so on, until we've exhausted the training inputs
+   * 
 
 ## How It Works
 ### 1. Breaking an image containing many digits into a sequence of separate images, each containing a single digit
