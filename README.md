@@ -15,6 +15,14 @@
 3. **feedforward neural networks:** neural networks where the output from one layer is used as input to the next layer, which means there are no loops in the network - information is always fed forward, never fed back
 
 4. We need to find weights and biases so that the output from the network approximates y(x) for all training inputs x, to quantify how well we're achieving this goal we define a **cost function**:   **C(w,b) ≡ (1/2n) ∑<sub>x</sub> ∥y(x) − a∥<sup>2</sup>**
+   * w denotes the collection of all weights in the network
+   * b all the biases
+   * n is the total number of training inputs
+   * a is the vector of outputs from the network when x is input
+   *  and the sum is over all training inputs x
+-> We aim to get to C(w,b)≈0, which means that our training algorithm has done a good job if it can find weights and biases, and on the contrary it wouldn't be doing so well if C(w,b) is large, which would mean that y(x) is not close to the output a for a large number of inputs
+  
+6.  
 
 ## How It Works
 ### 1. Breaking an image containing many digits into a sequence of separate images, each containing a single digit
