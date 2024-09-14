@@ -8,5 +8,6 @@
 2. Sigmoid: another type of artificial neuron similar to perceptrons, but modified so that small changes in their weights and bias cause only a small change in their output
    * Just like preceptons they have several binary inputs with their designated weights, but they can give off an output of any value between 0 and 1 unlike preceptons which are either 0 or 1
    * The output of a sigmoid is a sigmoid function which is:   **σ(z)≡ 1/(1 + e<sup>-z</sup>)**
-   * the shape of the sigmoid function when plotted is a smoothed out version of a step function, while the shape of a percepton is in fact a step function, the smoothness of σ means that small changes Δw<sub>j</sub> in the weights and Δb in the bias will produce a small shift Δoutput in the output from the neuron
+   * the shape of the sigmoid function when plotted is a smoothed out version of a step function, while the shape of a percepton is in fact a step function, the smoothness of **σ** means that small changes **Δw<sub>j</sub>** in the weights and **Δb** in the bias will produce a small shift **Δoutput** in the output from the neuron
+   * **Δoutput** is a linear function of the changes **Δw<sub>j</sub>** and **Δb** in the weights and bias. This linearity makes it easy to choose small changes in the weights and biases to achieve any desired small change in the output
    * 
