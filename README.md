@@ -20,5 +20,5 @@
 ### 1. Breaking an image containing many digits into a sequence of separate images, each containing a single digit
 ### 2. Classify each individual digit
   * To recognize individual digits a three-layer neural network is used, where:
-        - The input layer contains 784=28×28 neurons, as the training data for the network consists of 28 by 28 pixel images of scanned handwritten digits
-        - The second layer of the network is a hidden layer containing n neurons
+    - The input layer contains 784=28×28 neurons, as the training data for the network consists of 28 by 28 pixel images of scanned handwritten digits
+    - The second layer of the network is a hidden layer containing n neurons
