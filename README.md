@@ -14,7 +14,7 @@
 
 3. **feedforward neural networks:** neural networks where the output from one layer is used as input to the next layer, which means there are no loops in the network - information is always fed forward, never fed back
 
-4. 
+4. We need to find weights and biases so that the output from the network approximates y(x) for all training inputs x, to quantify how well we're achieving this goal we define a **cost function**:   **C(w,b) ≡ (1/2n) ∑<sub>x</sub> ∥y(x) − a∥<sup>2</sup>**
 
 ## How It Works
 ### 1. Breaking an image containing many digits into a sequence of separate images, each containing a single digit
@@ -22,3 +22,5 @@
   * To recognize individual digits a three-layer neural network is used, where:
     - The input layer contains 784=28×28 neurons, as the training data for the network consists of 28 by 28 pixel images of scanned handwritten digits
     - The second layer of the network is a hidden layer containing n neurons
+    - The output layer of the network contains 10 neurons each corresponding to a digit from 0 to 9
+    - 
