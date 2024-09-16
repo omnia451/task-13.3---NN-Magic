@@ -239,6 +239,7 @@
   * Runs relatively slower
 
   **TensorFlow:**
+  * Makes a more accurate model
   * Much more faster
   * automatically handles backpropagation, gradient computation, and weight updates
     
