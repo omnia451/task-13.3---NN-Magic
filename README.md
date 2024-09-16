@@ -199,7 +199,7 @@
     net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
     ```
 ### After runing `exec.py`
-  * After around 13 epochs it reached an accuracy of 94.6%
+  * After around 13 epochs the model reached an accuracy of 94.6%
     ![1](https://github.com/user-attachments/assets/66fbe22c-cc03-4d75-9cb4-d107ccdd664d)
 
 
