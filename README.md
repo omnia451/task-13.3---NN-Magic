@@ -198,13 +198,42 @@
     net = network.Network([784, 30, 10])
     net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
     ```
-### After runing `exec.py`
+### After running `exec.py`
   * After around 13 epochs the model reached an accuracy of 94.6%
     ![1](https://github.com/user-attachments/assets/66fbe22c-cc03-4d75-9cb4-d107ccdd664d)
 
 
-## Using tensorflow to do the exact same thing
+## Using TensorFlow to do the exact same thing
 ### After runing `tfmodel.py`
   * On running the basic code present in this repo, a model is created and saved with accuracy of around 97.18%
     ![2](https://github.com/user-attachments/assets/c5140439-7c50-4f4d-a8f0-3ea8eb69b9ff)
 
+## Num-Py based implementation VS TensorFlow model
+### Ease of Use
+  **Num-Py:**
+  * Was really great for learning the fundamentals of neural networks, backpropagation, and stochastic gradient descent
+  * Was more complex to write and understand than the TensorFlow code
+  * Lacks built-in utilities like model saving, metrics, and optimization routines
+
+  **TensorFlow:**
+  * Much more simple and requires less code
+  * Provides built-in functionalities for common tasks
+  * Includes optimizers like Adam, loss functions like cross-entropy, and evaluation metrics like accuracy by default
+  * everything is hidden making it too abstract and not ideal for learning the fundamentals of neural networks 
+    
+### Performance 
+  **Num-Py:**
+  * Runs relatively slower
+
+  **TensorFlow:**
+  * Much more faster
+  * automatically handles backpropagation, gradient computation, and weight updates
+    
+### Flexibility 
+  **Num-Py:**
+  * You can easily modify and experiment with various parts of the network since the entire thing is written from scratch
+  * Would be really helpful if you're trying to understand how different aspects of a neural network relates to its accuracy
+  * Too much freedom in the developing process introduces potential bugs
+
+  **TensorFlow:**
+  * You can still dive into low-level TensorFlow code if you want more control while still benefiting from the speed and optimizations that TensorFlow provides, but with less low-level control compared to a custom NumPy-based implementation
