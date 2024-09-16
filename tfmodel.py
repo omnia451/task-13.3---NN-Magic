@@ -1,6 +1,5 @@
 import tensorflow as tf
 
-
 # Loading the MNIST data set with samples and splitting it
 mnist = tf.keras.datasets.mnist
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
@@ -32,20 +31,3 @@ print(val_acc)
 
 # Saving the model
 model.save('handwritten_digits.model')
-
-
-# Load custom images and predict them
-"""
-image_number = 1
-while os.path.isfile('digits/digit{}.png'.format(image_number)):
-    try:
-        img = cv2.imread('digits/digit{}.png'.format(image_number))[:,:,0]
-        img = np.invert(np.array([img]))
-        prediction = model.predict(img)
-        print("The number is probably a {}".format(np.argmax(prediction)))
-        plt.imshow(img[0], cmap=plt.cm.binary)
-        plt.show()
-        image_number += 1
-    except:
-        print("Error reading image! Proceeding with next image...")
-        image_number += 1"""
