@@ -115,21 +115,21 @@
                 nabla_w[-l] = np.dot(delta, activations[-l-1].transpose())
             return (nabla_b, nabla_w)
       ```
-    * The `evaluate` method checks how well the network performs on the test data by counting the number of correct predictions, and The network’s output is the index of the neuron in the final layer with the highest activation value
+  * The `evaluate` method checks how well the network performs on the test data by counting the number of correct predictions, and The network’s output is the index of the neuron in the final layer with the highest activation value
       ```python
           def evaluate(self, test_data):
             test_results = [(np.argmax(self.feedforward(x)), y)
                             for (x, y) in test_data]
             return sum(int(x == y) for (x, y) in test_results)
       ```
-    * The method `cost_derivative` computes the gradient of the cost function with respect to the output activations, which is necessary for calculating the error at the output layer during backpropagation
+  * The method `cost_derivative` computes the gradient of the cost function with respect to the output activations, which is necessary for calculating the error at the output layer during backpropagation
       ```python
           def cost_derivative(self, output_activations, y):
             """Return the vector of partial derivatives \partial C_x /
             \partial a for the output activations."""
             return (output_activations-y)
       ```
-    * The `sigmoid` method is used as the activation function in the neurons, as it outputs a value between 0 and 1 and the `sigmoid_prime` method is the derivative of the sigmoid function, used in backpropagation to calculate how much the activation function contributes to the error
+  * The `sigmoid` method is used as the activation function in the neurons, as it outputs a value between 0 and 1 and the `sigmoid_prime` method is the derivative of the sigmoid function, used in backpropagation to calculate how much the activation function contributes to the error
       ```python
       def sigmoid(z):
         """The sigmoid function."""
