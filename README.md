@@ -86,7 +86,7 @@
           self.biases = [b-(eta/len(mini_batch))*nb
                          for b, nb in zip(self.biases, nabla_b)]
     ```
-    * The methode `backprop`  is the core algorithm for calculating the gradient of the cost function with respect to the weights and biases, consisting of two main steps:
+  * The methode `backprop`  is the core algorithm for calculating the gradient of the cost function with respect to the weights and biases, consisting of two main steps:
       - **Feedforward:** It computes and stores all activations and weighted sums `z` at each layer as the input is passed through the network
       - **Backward Pass:** It computes the error `delta` at the output layer, then propagates this error backward through the network, adjusting the weights and biases layer by layer
       ```python
