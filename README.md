@@ -203,4 +203,8 @@
     ![1](https://github.com/user-attachments/assets/66fbe22c-cc03-4d75-9cb4-d107ccdd664d)
 
 
-## Using pytourch to do the exact same thing
+## Using tensorflow to do the exact same thing
+### After runing `tfmodel.py`
+  * On running the basic code present in this repo, a model is created and saved with accuracy of around 97.18%
+    ![2](https://github.com/user-attachments/assets/c5140439-7c50-4f4d-a8f0-3ea8eb69b9ff)
+
