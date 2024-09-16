@@ -26,6 +26,13 @@
 
 6. **Stochastic gradient descent:** the idea behind it is to estimate the gradient ∇C by computing ∇C<sub>x</sub> for a small sample of randomly chosen training inputs, by averaging over this small sample we can quickly get a good estimate of the true gradient ∇C, which helps speed up gradient descent, and thus learning
    * stochastic gradient descent works by picking out a randomly chosen mini-batch of training inputs, and training with those, then we pick out another randomly chosen mini-batch and train with those. And so on, until we've exhausted the training inputs
+  
+7. **Cross-entropy cost function:** unlike the quadratic cost, it avoids the problem of learning slowing down, as in the cross-entropy cost function the larger the error, the faster the neuron will learn, and it can be written as: **C =(−1/n) ∑<sub>x</sub> [ylna + (1−y)ln(1−a)]**
+   * where n is the total number of items of training data
+   * the sum is over all training inputs x
+   * and y is the corresponding desired output
+  
+8. The **1/√n<sub>in</sub>** approach to weight initialization helps improve the way the neural nets learn, by preventing the learning slow down that random weight assignment might cause
      
 
 ## How It Works
@@ -204,6 +211,7 @@
 
 ## Modifying the network
 ### After running `network-modified.py`
+  * Cross-entropy cost function and a weight initialization approach were added to this code to help overcome learning slow downs
   * On running the basic code present in this repo, a model is created with accuracy of around 95.6%, which is not really a big difference from the previous model, but at least I got the chance to learn more about the new topics introduced in this chapter
     ![3](https://github.com/user-attachments/assets/23238605-3b40-455d-97af-c5f25f082f45)
 
