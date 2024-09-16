@@ -29,7 +29,7 @@
      
 
 ## How It Works
-### Classify each individual digit
+## Using our neural network to classify each individual digit
   * To recognize individual digits a three-layer neural network is used, where:
     - The input layer contains 784=28×28 neurons, as the training data for the network consists of 28 by 28 pixel images of scanned handwritten digits
     - The second layer of the network is a hidden layer containing n neurons
@@ -189,3 +189,18 @@
       e[j] = 1.0
       return e
     ```
+### exec.py
+  * It uses the previously defined `mnist_loader` and `network` modules to train a simple neural network on the MNIST handwritten digits dataset
+    ```python
+    import mnist_loader
+    training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
+    import network
+    net = network.Network([784, 30, 10])
+    net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
+    ```
+### After runing `exec.py`
+  * After around 13 epochs it reached an accuracy of 94.6%
+    ![1](https://github.com/user-attachments/assets/66fbe22c-cc03-4d75-9cb4-d107ccdd664d)
+
+
+## Using pytourch to do the exact same thing
