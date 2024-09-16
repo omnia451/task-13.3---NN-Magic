@@ -131,11 +131,11 @@
       ```
   * The `sigmoid` method is used as the activation function in the neurons, as it outputs a value between 0 and 1 and the `sigmoid_prime` method is the derivative of the sigmoid function, used in backpropagation to calculate how much the activation function contributes to the error
       ```python
-      def sigmoid(z):
-        """The sigmoid function."""
-        return 1.0/(1.0+np.exp(-z))
-    
-      def sigmoid_prime(z):
-        """Derivative of the sigmoid function."""
-        return sigmoid(z)*(1-sigmoid(z))
+          def sigmoid(z):
+            """The sigmoid function."""
+            return 1.0/(1.0+np.exp(-z))
+        
+          def sigmoid_prime(z):
+            """Derivative of the sigmoid function."""
+            return sigmoid(z)*(1-sigmoid(z))
       ```
