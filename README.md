@@ -202,6 +202,11 @@
   * After around 13 epochs the model reached an accuracy of 94.6%
     ![1](https://github.com/user-attachments/assets/66fbe22c-cc03-4d75-9cb4-d107ccdd664d)
 
+## Modifying the network
+### After running `network-modified.py`
+  * On running the basic code present in this repo, a model is created with accuracy of around 95.6%, which is not really a big difference from the previous model, but at least I got the chance to learn more about the new topics introduced in this chapter
+    ![3](https://github.com/user-attachments/assets/23238605-3b40-455d-97af-c5f25f082f45)
+
 
 ## Using TensorFlow to do the exact same thing
 ### After runing `tfmodel.py`
